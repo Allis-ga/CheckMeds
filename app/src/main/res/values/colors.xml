@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fondos -->
+    <color name="fondo_general">#D0E8F2</color> <!-- Azul muy suave -->
+    <color name="fondo_tarjeta">#FFFFFF</color> <!-- Blanco puro -->
+    <color name="borde_tarjeta">#E0E0E0</color> <!-- Gris claro -->
+
+    <!-- Botones -->
+    <color name="boton_primario_fondo">#69A1D1</color> <!-- Azul medio (Tomar medicamento) -->
+    <color name="boton_primario_texto">#FFFFFF</color> <!-- Texto blanco -->
+
+    <color name="boton_secundario_fondo">#F7E7A9</color> <!-- Amarillo suave (Posponer) -->
+    <color name="boton_secundario_texto">#333333</color> <!-- Gris oscuro para texto -->
+
+    <color name="boton_critico_fondo">#F2A8A8</color> <!-- Rojo suave (Omitir) -->
+    <color name="boton_critico_texto">#FFFFFF</color> <!-- Texto blanco -->
+
+    <!-- Textos generales -->
+    <color name="texto_titulo">#69A1D1</color> <!-- Azul medio (títulos) -->
+    <color name="texto_subtitulo">#788199</color> <!-- Gris oscuro (subtítulos y cuerpos) -->
+    <color name="texto_general">#333333</color> <!-- Negro suave (textos normales) -->
+
+    <!-- Mensajes especiales -->
+    <color name="mensaje_exito">#A8D5BA</color> <!-- Verde éxito -->
+    <color name="mensaje_error">#F2A8A8</color> <!-- Rojo suave para omisión -->
+
+    <!-- Otros -->
+    <color name="negro_suave">#333333</color> <!-- Color de texto alternativo -->
+    <color name="verde_estado">#009929</color>
+    <color name="amarillo_estado">#FB9403</color>
+    <color name="rojo_estado">#FF0000</color>
+
+</resources>

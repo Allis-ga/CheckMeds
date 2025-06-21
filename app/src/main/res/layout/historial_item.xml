@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boton_primario_texto"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp"
+    android:elevation="4dp">
+
+    <!-- Imagen de confirmación -->
+    <ImageView
+        android:id="@+id/imgConfirmacion"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:background="#E0E0E0"
+        android:src="@drawable/ic_camera_alt"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:clipToOutline="true" />
+
+    <!-- Contenedor de textos -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/imgConfirmacion"
+        android:layout_marginEnd="16dp"
+        android:layout_centerVertical="true">
+
+        <!-- Nombre del medicamento -->
+        <TextView
+            android:id="@+id/tvNombreHistorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paracetamol"
+            android:textSize="18sp"
+            android:textColor="@color/texto_titulo"
+            android:fontFamily="sans-serif-medium"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <!-- Estado de la toma -->
+        <TextView
+            android:id="@+id/tvEstadoHistorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tomado"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="4dp" />
+
+        <!-- Fecha y hora -->
+        <TextView
+            android:id="@+id/tvFechaHoraHistorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 mar 2025, 08:00"
+            android:textSize="14sp"
+            android:textColor="@color/texto_subtitulo"
+            android:fontFamily="sans-serif" />
+
+    </LinearLayout>
+
+</RelativeLayout>

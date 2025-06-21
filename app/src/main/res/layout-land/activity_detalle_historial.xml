@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/horizontal"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <!-- Columna izquierda: Imagen -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fotografía de Evidencia"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textColor="@color/texto_titulo"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="12dp" />
+
+            <ImageView
+                android:id="@+id/imgConfirmacionDetalle"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:scaleType="centerCrop"
+                android:background="@color/boton_primario_texto"
+                android:drawableStart="@drawable/ic_camera_alt"
+                android:layout_marginBottom="24dp" />
+        </LinearLayout>
+
+        <!-- Columna derecha: Información -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tvNombreDetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre Medicamento"
+                android:textSize="28sp"
+                android:textColor="@color/texto_titulo"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tvEstadoDetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estado"
+                android:textSize="24sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tvFechaHoraDetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha y Hora"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/texto_subtitulo"
+                android:layout_marginBottom="24dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

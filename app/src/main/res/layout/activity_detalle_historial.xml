@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vertical"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fotografía Tomada de Evidencia"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="@color/texto_titulo"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="12dp"/>
+
+        <ImageView
+            android:id="@+id/imgConfirmacionDetalle"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            android:background="@color/boton_primario_texto"
+            android:drawableStart="@drawable/ic_camera_alt"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:id="@+id/tvNombreDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre Medicamento"
+            android:textSize="30sp"
+            android:textColor="@color/texto_titulo"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvEstadoDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvFechaHoraDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha y Hora"
+            android:textSize="23sp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/texto_subtitulo"
+            android:layout_marginBottom="24dp"/>
+    </LinearLayout>
+</ScrollView>

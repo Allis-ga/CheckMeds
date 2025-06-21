@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/horizontal"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:weightSum="2">
+
+        <!-- Columna izquierda: datos -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/tvTituloRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registrar Medicamento"
+                android:textSize="26sp"
+                android:textColor="@color/texto_titulo"
+                android:fontFamily="sans-serif-medium"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp" />
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre del medicamento"
+                android:background="@drawable/bg_edittext"
+                android:padding="14dp"
+                android:textColor="@color/boton_secundario_texto"
+                android:textColorHint="@color/texto_subtitulo"
+                android:fontFamily="sans-serif" />
+
+            <EditText
+                android:id="@+id/etDosis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dosis (ej. 1 pastilla)"
+                android:background="@drawable/bg_edittext"
+                android:padding="14dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/boton_secundario_texto"
+                android:textColorHint="@color/texto_subtitulo"
+                android:fontFamily="sans-serif" />
+
+            <EditText
+                android:id="@+id/etFrecuencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cada cuántas horas (ej. 8)"
+                android:background="@drawable/bg_edittext"
+                android:padding="14dp"
+                android:inputType="number"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/boton_secundario_texto"
+                android:textColorHint="@color/texto_subtitulo"
+                android:fontFamily="sans-serif" />
+
+            <EditText
+                android:id="@+id/etDuracion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Durante cuántos días (ej. 5)"
+                android:background="@drawable/bg_edittext"
+                android:padding="14dp"
+                android:inputType="number"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/boton_secundario_texto"
+                android:textColorHint="@color/texto_subtitulo"
+                android:fontFamily="sans-serif" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <EditText
+                    android:id="@+id/etFechaInicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Fecha y hora de inicio"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="14dp"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:textColor="@color/boton_secundario_texto"
+                    android:textColorHint="@color/texto_subtitulo"
+                    android:fontFamily="sans-serif" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_alarm"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- Columna derecha: imagen y botones -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingStart="16dp">
+
+            <ImageView
+                android:id="@+id/imgMedicamento"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/ic_medication"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/btnSeleccionarImagen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tomar Imagen"
+                android:textColor="@android:color/white"
+                android:background="@drawable/bg_boton_secundario"
+                android:drawableLeft="@drawable/ic_camera_alt"
+                android:drawablePadding="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:textColor="@android:color/white"
+                android:background="@drawable/bg_boton_primario"
+                android:layout_marginTop="32dp"
+                android:padding="16dp"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

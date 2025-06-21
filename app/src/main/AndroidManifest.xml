@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" /> <!-- Se declaran los permisos necesarios para funcionalidad -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.historial.DetalleHistorialActivity"
+            android:exported="false" />
+        <!-- Declara la pantalla de la actividad detalle de medicamento -->
+        <activity
+            android:name=".ui.registro.DetalleMedicamentoActivity"
+            android:exported="false" /> <!-- Declara la pantalla de la actividad configuración de mensaje de la aplicacion -->
+        <activity
+            android:name=".ui.configuracion.ConfiguracionActivity"
+            android:exported="false" /> <!-- Pantalla historial de tomas -->
+        <activity
+            android:name=".ui.historial.HistorialActivity"
+            android:exported="false" /> <!-- Pantalla que se muestra al sonar la alarma -->
+        <activity
+            android:name=".ui.alarma.AlarmaActivity"
+            android:exported="false" /> <!-- Pantalla para registrar un nuevo medicamento -->
+        <activity
+            android:name=".ui.registro.RegistroMedicamentoActivity"
+            android:exported="false" /> <!-- Pantalla principal de CheckMeds -->
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Declaración del proveedor de archivos para compartir las imagenes capturadas -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- Receivers para alarmas y eventos del sistema -->
+        <!-- Receiver que responde cuando suena una alarma programada -->
+        <receiver
+            android:name=".ui.alarma.AlarmaReceiver"
+            android:exported="false" /> <!-- Receiver que escucha el evento de reinicio del dispositivo para reprogramar alarmas -->
+        <receiver
+            android:name=".ui.alarma.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver> <!-- Receiver que permite posponer una alarma activa -->
+        <receiver
+            android:name=".ui.alarma.PosponerReceiver"
+            android:exported="false" />
+    </application>
+
+</manifest>

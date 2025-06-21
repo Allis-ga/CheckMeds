@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/horizontal"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <!-- Lado Izquierdo: Título -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvTituloConfig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Configuración"
+                android:textColor="@color/texto_titulo"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <!-- Lado Derecho: Formulario -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="10dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <!-- Número de contacto -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Número de contacto"
+                android:textSize="20sp"
+                android:textColor="@color/texto_subtitulo"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etTelefonoContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ej: 5512345678"
+                android:background="@drawable/bg_edittext"
+                android:padding="12dp"
+                android:inputType="phone"
+                android:textColor="@color/boton_secundario_texto"
+                android:textColorHint="@color/texto_subtitulo"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Activar SMS -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enviar SMS al confirmar toma"
+                android:textSize="20sp"
+                android:textColor="@color/texto_subtitulo"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="8dp" />
+
+            <Switch
+                android:id="@+id/switchSms"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Activar SMS"
+                android:textColor="@color/texto_titulo"
+                android:textSize="18sp" />
+
+            <!-- Tiempo de posposición -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tiempo de posposición (minutos)"
+                android:textSize="20sp"
+                android:textColor="@color/texto_subtitulo"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/etTiempoPosponer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ej: 10"
+                android:background="@drawable/bg_edittext"
+                android:padding="12dp"
+                android:inputType="number"
+                android:textColor="@color/boton_secundario_texto"
+                android:textColorHint="@color/texto_subtitulo"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Botón Guardar -->
+            <Button
+                android:id="@+id/btnGuardarConfig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:textColor="@android:color/white"
+                android:background="@drawable/bg_boton_primario"
+                android:fontFamily="sans-serif-medium"
+                android:padding="14dp"
+                android:textSize="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

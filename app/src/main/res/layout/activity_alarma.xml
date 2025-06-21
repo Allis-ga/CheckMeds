@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <!-- Texto de alerta -->
+    <TextView
+        android:id="@+id/tvAlerta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Hora de tomar el medicamento!"
+        android:textSize="28sp"
+        android:textColor="@color/boton_critico_fondo"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Imagen del medicamento -->
+    <ImageView
+        android:id="@+id/imgMedicamento"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/ic_medication"
+        android:src="@drawable/ic_medication" />
+
+    <!-- Nombre del medicamento -->
+    <TextView
+        android:id="@+id/tvNombreMedicamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del medicamento"
+        android:textSize="25sp"
+        android:textColor="@color/texto_titulo"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:layout_marginTop="8dp" />
+
+    <!-- Dosis del medicamento -->
+    <TextView
+        android:id="@+id/tvDosisMedicamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dosis: "
+        android:textSize="25sp"
+        android:textColor="@color/texto_subtitulo"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Botones -->
+    <LinearLayout
+        android:id="@+id/layoutBotones"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnTomar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tomar medicamento"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_boton_primario"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="12dp"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/btnPosponer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Posponer"
+            android:textColor="@color/boton_secundario_texto"
+            android:background="@drawable/bg_boton_secundario"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="12dp"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/btnOmitir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Omitir"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_boton_critico"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+</LinearLayout>
